@@ -162,3 +162,41 @@ body {
 	color: var(--black);
 	background: var(--bg-color);
 }
+
+.about-wrapper {
+	display: flex;
+	justify-content: space-between;
+  margin: 0 110px 0 110px;
+	padding: 92px 0 92px 0;
+}
+
+.about-title {
+  max-width: 463px;
+	font-family: Inika;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 52px;
+	color: var(--green);
+	margin-top: 45px;
+  margin-bottom: 40px;
+}
+
+.text-orange {
+  color: var(--orange);
+}
+
+.about-text {
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+	color: var(--main-text-color);
+	max-width: 605px;
+}
+
+.about-pic {
+  width: 464px;
+  height: 100%;
+  display: block;
+  align-self: center;
+}
