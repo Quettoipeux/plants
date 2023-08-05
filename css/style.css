@@ -1,5 +1,11 @@
-* {
-	margin: 0;
+@import url(https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&display=swap);
+
+/* CSS reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
   box-sizing: border-box;
@@ -13,9 +19,48 @@ a {
   text-decoration: none;
 }
 
+/* Variables */
+
+:root {
+  --bg-color: #edf2ec;
+  --header-bg: rgba(237, 242, 236, 0.9);
+
+  --main-text-color: #636060;
+  --second-text-color: #717171;
+  
+  --green: #499A18;
+  --orange: #E06733;
+  --black: #010201;
+  --white: #f8f8f8;
+}
+
+/* Main styles */
+
+body {
+  font-family: Inika;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 50px;
+	color: var(--main-text-color);
+}
+
 .wrapper {
 	max-width: 1440px;
 	margin: 0 auto;
+}
+
+.button {
+	width: 158px;
+	height: 44px;
+	border: 2px solid var(--orange);
+	border-radius: 10px;
+	transition: all .5s;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--white);
+	background: #e06733;
 }
 
 .header {
@@ -23,14 +68,18 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
+  background-color: var(--header-bg);
 }
 
 .header-wrapper {
   display: flex;
   justify-content: space-between;
   margin: 0 110px 0 110px;
-  padding: 30px 0 60px 0;
+  padding: 30px 0 34px 0;
+}
+
+.header-logo {
+  cursor: pointer;
 }
 
 .header-nav {
@@ -42,25 +91,74 @@ a {
 }
 
 .header-nav-item {
-  margin-left: 50px;
+  margin-left: 46px;
 }
 
 .header-nav-item-link {
-	color: #010201;
+	color: var(--black);
+	transition: all .5s;
+}
+
+.header-nav-item-link:hover {
+	color: var(--orange);
+}
+
+.header-nav-item-link:active {
+	color: var(--orange);
 }
 
 .welcome {
-  padding-top: 118px;
-	background: #edf2ec;
+  padding-top: 114px;
+	background: var(--bg-color);
 }
 
 .welcome-wrapper {
 	display: flex;
 	justify-content: space-between;
   margin: 0 110px 0 110px;
-	padding: 30px 0 60px 0;
+	padding: 62px 0 62px 0;
 }
 
 .welcome-block {
-	max-width: 550px;
+	max-width: 549px;
+}
+
+.welcome-pic {
+  width: 464px;
+  height: 100%;
+  display: block;
+  align-self: center;
+}
+
+.welcome-title {
+  font-family: Inter;
+	font-weight: 700;
+	font-size: 45px;
+	color: var(--second-text-color);
+	margin-bottom: 45px;
+	margin-top: 36px;
+}
+
+.text-green {
+  color: var(--green);
+}
+
+.welcome-text {
+  font-family: Inter;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 35px;
+	color: var(--main-text-color);
+	margin-bottom: 45px;
+}
+
+.welcome-button {
+	font-family: Inter;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+  text-transform: uppercase;
+	color: var(--black);
+	background: var(--bg-color);
 }
